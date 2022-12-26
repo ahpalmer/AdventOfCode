@@ -1,8 +1,5 @@
 ﻿//practice LINQ statements
 //Make a method that returns a Generic list, use LINQ to analyze generic list
-using System.Globalization;
-using System.Xml;
-
 string path = "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2022\\Day3Challenge1\\data\\input.txt";
 var list = CreateList(path);
 //Now Linq statements
@@ -50,34 +47,37 @@ var result = list.Select(s => s.Substring(0, s.Length / 2)
                                         .ToList());
 */
 
-var result = list.Chunk(3).Select(s => new { Zero = s[0], One = s[1], Two = s[2] });
+var result = list.Chunk(3).Select(s => new { Zero = s[0], One = s[1], Two = s[2]});
+
+
+List<List<char>> charOutput = new List<List<char>>();
 
 foreach (var item in result)
 {
-    Console.WriteLine(item.Zero);
+    charOutput.Add(item.Zero.Intersect(item.One.Intersect(item.Two)).ToList());
 }
 
 
 int count = 0;
 List<int> counter = new List<int>();
-//foreach (var item in result)
-//{
-//    if (item[0] > 96)
-//    {
-//        //Console.WriteLine($"{item[0]}: {item[0] - 96}");
-//        counter.Add(item[0] - 96);
-//    }
-//    else if (item[0] > 64)
-//    {
-//        //Console.WriteLine($"{item[0]}: {item[0] - 38}");
-//        counter.Add(item[0] - 38);
-//    }
-//    else
-//    {
-//        Console.WriteLine("Error");
-//        count++;
-//    }
-//}
+foreach (var item in charOutput)
+{
+    if (item[0] > 96)
+    {
+        //Console.WriteLine($"{item[0]}: {item[0] - 96}");
+        counter.Add(item[0] - 96);
+    }
+    else if (item[0] > 64)
+    {
+        //Console.WriteLine($"{item[0]}: {item[0] - 38}");
+        counter.Add(item[0] - 38);
+    }
+    else
+    {
+        Console.WriteLine("Error");
+        count++;
+    }
+}
 Console.WriteLine(count);
 Console.WriteLine(counter.Sum());
 
