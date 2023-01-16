@@ -1,0 +1,8 @@
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\NETFRAMEWORK\bin\Debug\NETFRAMEWORK.exe.config
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\NETFRAMEWORK\bin\Debug\NETFRAMEWORK.exe
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\NETFRAMEWORK\bin\Debug\NETFRAMEWORK.pdb
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\NETFRAMEWORK\obj\Debug\NETFRAMEWORK.csproj.AssemblyReference.cache
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\NETFRAMEWORK\obj\Debug\NETFRAMEWORK.csproj.SuggestedBindingRedirects.cache
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\NETFRAMEWORK\obj\Debug\NETFRAMEWORK.csproj.CoreCompileInputs.cache
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\NETFRAMEWORK\obj\Debug\NETFRAMEWORK.exe
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\NETFRAMEWORK\obj\Debug\NETFRAMEWORK.pdb

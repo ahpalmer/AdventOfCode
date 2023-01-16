@@ -1,0 +1,3 @@
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_Challenge1_v4\obj\Debug\Day3_Challenge1_v4.csproj.AssemblyReference.cache
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_Challenge1_v4\obj\Debug\Day3_Challenge1_v4.csproj.SuggestedBindingRedirects.cache
+C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_Challenge1_v4\obj\Debug\Day3_Challenge1_v4.csproj.CoreCompileInputs.cache
