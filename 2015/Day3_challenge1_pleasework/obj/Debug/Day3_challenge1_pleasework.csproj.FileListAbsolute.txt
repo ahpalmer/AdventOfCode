@@ -1,8 +1,0 @@
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_pleasework\obj\Debug\Day3_challenge1_pleasework.csproj.AssemblyReference.cache
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_pleasework\obj\Debug\Day3_challenge1_pleasework.csproj.SuggestedBindingRedirects.cache
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_pleasework\obj\Debug\Day3_challenge1_pleasework.csproj.CoreCompileInputs.cache
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_pleasework\bin\Debug\Day3_challenge1_pleasework.exe.config
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_pleasework\bin\Debug\Day3_challenge1_pleasework.exe
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_pleasework\bin\Debug\Day3_challenge1_pleasework.pdb
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_pleasework\obj\Debug\Day3_challenge1_pleasework.exe
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_pleasework\obj\Debug\Day3_challenge1_pleasework.pdb

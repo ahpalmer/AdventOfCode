@@ -1,3 +1,0 @@
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_newmethods\obj\Debug\Day3_challenge1_newmethods.csproj.AssemblyReference.cache
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_newmethods\obj\Debug\Day3_challenge1_newmethods.csproj.SuggestedBindingRedirects.cache
-C:\Users\ahpal\OneDrive\Documents\2CSharp\AdventOfCode\2015\Day3_challenge1_newmethods\obj\Debug\Day3_challenge1_newmethods.csproj.CoreCompileInputs.cache
