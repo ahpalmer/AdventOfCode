@@ -1,9 +1,6 @@
 ﻿//practice LINQ statements
 //Make a method that returns a Generic list, use LINQ to analyze generic list
-using System.Globalization;
-using System.Xml;
-
-string path = "D:\\LocalRepos\\AdventOfCode\\2022\\Day3Challenge1\\data\\input.txt";
+string path = "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2022\\Day3Challenge1\\data\\input.txt";
 var list = CreateList(path);
 //Now Linq statements
 //Write them individually.  You don't have to do a multiple LINQ statement like Marlee does yet.
@@ -42,13 +39,28 @@ foreach (var item in listLinq3)
                                         .ToList())
                             .ToList();
 */
+
+/*
+This is the functioning code for Challenge 1:
 var result = list.Select(s => s.Substring(0, s.Length / 2)
                                         .Intersect(s.Substring(s.Length / 2))
                                         .ToList());
+*/
+
+var result = list.Chunk(3).Select(s => new { Zero = s[0], One = s[1], Two = s[2]});
+
+
+List<List<char>> charOutput = new List<List<char>>();
+
+foreach (var item in result)
+{
+    charOutput.Add(item.Zero.Intersect(item.One.Intersect(item.Two)).ToList());
+}
+
 
 int count = 0;
 List<int> counter = new List<int>();
-foreach (var item in result)
+foreach (var item in charOutput)
 {
     if (item[0] > 96)
     {
@@ -84,7 +96,7 @@ static List<string> CreateList(string path)
     using (StreamReader sr = File.OpenText(path))
     {
         string s;
-        while((s = sr.ReadLine()) != null)
+        while ((s = sr.ReadLine()) != null)
         {
             list.Add(s);
         }
