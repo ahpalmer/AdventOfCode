@@ -12,21 +12,21 @@ foreach (var item in dividedList)
 {
     //Challenge 1 logic:
 
-    //if (item[0] >= item[2] && item[1] <= item[3])
-    //{
-    //    count++;
-    //}
-    //else if (item[0] <= item[2] && item[1] >= item[3])
-    //{
-    //    count++;
-    //}
-    
+    if (item[0] >= item[2] && item[1] <= item[3])
+    {
+        count++;
+    }
+    else if (item[0] <= item[2] && item[1] >= item[3])
+    {
+        count++;
+    }
+
 
     //Challenge 2: This logic is incorrect.   The answer must be higher than the answer for challenge 1: 530
-    if (item[0] >= item[1] && item[0] <= item[3])
-        count++;
-    else if (item[2] >= item[1] && item[2] <= item[3])
-        count++;
+    //if (item[0] >= item[1] && item[0] <= item[3])
+    //    count++;
+    //else if (item[2] >= item[1] && item[2] <= item[3])
+    //    count++;
 }
 
 Console.WriteLine(count);
