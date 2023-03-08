@@ -1,0 +1,15 @@
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\bin\Debug\net6.0\Day1Challenge2.exe
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\bin\Debug\net6.0\Day1Challenge2.deps.json
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\bin\Debug\net6.0\Day1Challenge2.runtimeconfig.json
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\bin\Debug\net6.0\Day1Challenge2.dll
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\bin\Debug\net6.0\Day1Challenge2.pdb
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\Day1Challenge2.csproj.AssemblyReference.cache
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\Day1Challenge2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\Day1Challenge2.AssemblyInfoInputs.cache
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\Day1Challenge2.AssemblyInfo.cs
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\Day1Challenge2.csproj.CoreCompileInputs.cache
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\Day1Challenge2.dll
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\refint\Day1Challenge2.dll
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\Day1Challenge2.pdb
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\Day1Challenge2.genruntimeconfig.cache
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2022\Day1Challenge2\obj\Debug\net6.0\ref\Day1Challenge2.dll
