@@ -1,6 +1,5 @@
-﻿using System.Dynamic;
-using System.Globalization;
-using System.Security.Cryptography.X509Certificates;
+﻿using System.Text;
+using System.Text.RegularExpressions;
 
 class Program
 {
@@ -102,23 +101,18 @@ class Program
     static List<List<int>> CreateIntList(List<string> fileOutput)
     {
         List<List<int>> intList = new List<List<int>>();
-        Console.WriteLine("FileOutput: {0}", fileOutput[11]);
+        fileOutput.RemoveRange(0, 10);
 
         //I cannot believe this worked. But it did.
         //It did not.  By breaking this down into Char, you mess up every 2 digit int.  Still, pretty cool code so I'm gonna keep it.
-        var outputWhat = fileOutput.AsEnumerable().Select(s => s.ToCharArray().AsEnumerable().Where(x => Int32.TryParse(x.ToString(), out int q)));
-        //I can't figure out how to remove the first 10 entries.  I need to be able to access the index.  
-        var anotherOutput = outputWhat.Select(s => s.Select(x => Int32.Parse(x.ToString())));
-        var anotheranotherOutput = anotherOutput.SelectMany((s, index) => s.Where(b => index > 9));
+        //var outputWhat = fileOutput.AsEnumerable().Select(s => s.ToCharArray().AsEnumerable().Where(x => Int32.TryParse(x.ToString(), out int q)));
+        //var anotherOutput = outputWhat.Select(s => s.Select(x => Int32.Parse(x.ToString())));
+        //var anotheranotherOutput = anotherOutput.SelectMany((s, index) => s.Where(b => index > 9));
 
-        int count = 0;
-        foreach (var q in anotheranotherOutput)
-        {
-            count++;
-            Console.WriteLine("what...{0}", count);
-            
-            Console.WriteLine("{0}\n", q);
-        }
+        var stringListOutput = fileOutput.Select(s => Regex.Split(s, " ").ToList());
+
+        var intArrayOutput = stringListOutput.Select(s => s.RemoveAll(x => Regex.Match(x, "\\D").Success));
+        Console.ReadKey();
 
         return intList;
     }
