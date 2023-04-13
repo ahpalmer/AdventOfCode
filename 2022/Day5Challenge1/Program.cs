@@ -110,8 +110,25 @@ class Program
         //var anotheranotherOutput = anotherOutput.SelectMany((s, index) => s.Where(b => index > 9));
 
         var stringListOutput = fileOutput.Select(s => Regex.Split(s, " ").ToList());
+        foreach(var variable in stringListOutput)
+        {
+            foreach(var item in variable)
+            {
 
-        var intArrayOutput = stringListOutput.Select(s => s.RemoveAll(x => Regex.Match(x, "\\D").Success));
+            }
+        }
+
+        IEnumerable<List<int>> intArrayOutput = (IEnumerable<List<int>>)stringListOutput.Select(s => s.RemoveAll(x => !Int32.TryParse(x, out var stuff)));
+
+        foreach(var item in intArrayOutput)
+        {
+            Console.WriteLine($"New Line: {item}");
+            foreach ( var item2 in item)
+            {
+                Console.WriteLine(item2);
+            }
+            Console.WriteLine("\n");
+        }
         Console.ReadKey();
 
         return intList;
