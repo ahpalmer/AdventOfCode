@@ -14,7 +14,11 @@ class Program
         List<Stack<char>> stackList = new List<Stack<char>>();
         stackList = CreateStackList(fileOutput);
 
-        CreateIntList(fileOutput);
+        IEnumerable<IEnumerable<int>> intList = CreateIntList(fileOutput);
+
+        List<Stack<char>> finalStackList = SolveStackProblem(stackList, intList);
+
+        PrintAllStacks(finalStackList);
     }
 
     static List<Stack<char>> CreateStackList(List<string> fileOutput)
@@ -97,8 +101,7 @@ class Program
         return returnList;
     }
 
-    //Don't actually need this I think.
-    static List<List<int>> CreateIntList(List<string> fileOutput)
+    static IEnumerable<IEnumerable<int>> CreateIntList(List<string> fileOutput)
     {
         List<List<int>> intList = new List<List<int>>();
         fileOutput.RemoveRange(0, 10);
@@ -110,29 +113,40 @@ class Program
         //var anotheranotherOutput = anotherOutput.SelectMany((s, index) => s.Where(b => index > 9));
 
         var stringListOutput = fileOutput.Select(s => Regex.Split(s, " ").ToList());
-        foreach(var variable in stringListOutput)
-        {
-            foreach(var item in variable)
-            {
-
-            }
-        }
 
         IEnumerable<IEnumerable<string>> intArray = stringListOutput.Select(s => s.Where(x => Int32.TryParse(x, out var stuff)));
 
         IEnumerable<IEnumerable<int>> intArrayOutput = intArray.Select(s => s.Select(x => Int32.Parse(x)));
 
-        foreach(var item in intArrayOutput)
-        {
-            Console.WriteLine($"New Line: {item}");
-            foreach ( var item2 in item)
-            {
-                Console.WriteLine(item2);
-            }
-            Console.WriteLine("\n");
-        }
-        Console.ReadKey();
+        //foreach(var item in intArrayOutput)
+        //{
+        //    Console.WriteLine($"New Line: {item}");
+        //    foreach ( var item2 in item)
+        //    {
+        //        Console.WriteLine(item2);
+        //    }
+        //    Console.WriteLine("\n");
+        //}
+        //Console.ReadKey();
 
-        return intList;
+        return intArrayOutput;
+    }
+
+    static List<Stack<char>> SolveStackProblem(List<Stack<char>> stackList, IEnumerable<IEnumerable<int>> intList)
+    {
+        foreach (var item in intList)
+        {
+            int numberOfBlocks = item.ToList()[0];
+            int fromStack = (item.ToList()[1]) - 1;
+            int toStack = (item.ToList()[2]) - 1;
+
+            for (int i = 0; i < numberOfBlocks; i++)
+            {
+                char popped = stackList[fromStack].Pop();
+                stackList[toStack].Push(popped);
+            }
+        }
+
+        return stackList;
     }
 }
