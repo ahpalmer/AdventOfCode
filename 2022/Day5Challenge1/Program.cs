@@ -118,7 +118,9 @@ class Program
             }
         }
 
-        IEnumerable<List<int>> intArrayOutput = (IEnumerable<List<int>>)stringListOutput.Select(s => s.RemoveAll(x => !Int32.TryParse(x, out var stuff)));
+        IEnumerable<IEnumerable<string>> intArray = stringListOutput.Select(s => s.Where(x => Int32.TryParse(x, out var stuff)));
+
+        IEnumerable<IEnumerable<int>> intArrayOutput = intArray.Select(s => s.Select(x => Int32.Parse(x)));
 
         foreach(var item in intArrayOutput)
         {
