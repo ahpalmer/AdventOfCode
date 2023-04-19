@@ -1,24 +1,23 @@
-﻿using System.Text;
+﻿using Day5;
+using System.Runtime.CompilerServices;
+using System.Text;
 using System.Text.RegularExpressions;
 
 class Program
 {
+    Challenge1 Challenge1;
+    Challenge2 Challenge2;
+
+    public Program()
+    {
+        this.Challenge1 = new Challenge1();
+        this.Challenge2 = new Challenge2();
+    }
+
     public static void Main(string[] args)
     {
-        string dir = Directory.GetCurrentDirectory();
-        Console.WriteLine(dir);
-        string path = dir + "\\..\\..\\..\\data\\input.txt";
-        
-        List<string> fileOutput = CreateStringList(path);
-
-        List<Stack<char>> stackList = new List<Stack<char>>();
-        stackList = CreateStackList(fileOutput);
-
-        IEnumerable<IEnumerable<int>> intList = CreateIntList(fileOutput);
-
-        List<Stack<char>> finalStackList = SolveStackProblem(stackList, intList);
-
-        PrintAllStacks(finalStackList);
+        //Challenge1.ChallengeOneSolve();
+        Challenge2.ChallengeTwoSolve();
     }
 
     static List<Stack<char>> CreateStackList(List<string> fileOutput)
