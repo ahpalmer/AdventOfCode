@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2022\\Day5Challenge1\\Day5Challenge1.csproj": {}
+    "D:\\LocalRepos\\AdventOfCode\\2022\\Day5Challenge1\\Day5Challenge1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2022\\Day5Challenge1\\Day5Challenge1.csproj": {
+    "D:\\LocalRepos\\AdventOfCode\\2022\\Day5Challenge1\\Day5Challenge1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2022\\Day5Challenge1\\Day5Challenge1.csproj",
+        "projectUniqueName": "D:\\LocalRepos\\AdventOfCode\\2022\\Day5Challenge1\\Day5Challenge1.csproj",
         "projectName": "Day5Challenge1",
-        "projectPath": "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2022\\Day5Challenge1\\Day5Challenge1.csproj",
+        "projectPath": "D:\\LocalRepos\\AdventOfCode\\2022\\Day5Challenge1\\Day5Challenge1.csproj",
         "packagesPath": "C:\\Users\\andrewpalmer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2022\\Day5Challenge1\\obj\\",
+        "outputPath": "D:\\LocalRepos\\AdventOfCode\\2022\\Day5Challenge1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
