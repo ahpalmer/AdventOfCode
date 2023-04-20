@@ -28,7 +28,7 @@ namespace Day5
 
             IEnumerable<IEnumerable<int>> intList = Utility.CreateIntList(fileOutput);
 
-            List<Stack<char>> finalStackList = Utility.SolveStackProblem(stackList, intList);
+            List<Stack<char>> finalStackList = Utility.SolveStackProblemTwo(stackList, intList);
 
             Utility.PrintAllStacks(finalStackList);
         }

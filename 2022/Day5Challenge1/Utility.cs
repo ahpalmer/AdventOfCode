@@ -139,5 +139,27 @@ namespace Day5
 
             return stackList;
         }
+
+        public static List<Stack<char>> SolveStackProblemTwo(List<Stack<char>> stackList, IEnumerable<IEnumerable<int>> intList)
+        {
+            foreach (var item in intList)
+            {
+                int numberOfBlocks = item.ToList()[0];
+                int fromStack = (item.ToList()[1]) - 1;
+                int toStack = (item.ToList()[2]) - 1;
+
+                Stack<char> charsMoving = new Stack<char>();
+                for (int i = 0; i < numberOfBlocks; i++)
+                {
+                    charsMoving.Push(stackList[fromStack].Pop());
+                }
+                for(int i = 0; i < numberOfBlocks; i++)
+                {
+                    stackList[toStack].Push(charsMoving.Pop());
+                }
+            }
+
+            return stackList;
+        }
     }
 }
