@@ -19,7 +19,7 @@ public class Challenge1
     {
         string data = Utility.RetrieveData();
         int answer = FindUnique(data);
-        Console.WriteLine(answer);
+        Console.WriteLine($"Challenge 1 answer: {answer}");
     }
 
     public static int FindUnique(string data)
