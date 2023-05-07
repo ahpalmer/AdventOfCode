@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Files
+public class FilesBuilds
 {
     //Fields
     private string fileName;
@@ -17,7 +17,7 @@ public class Files
     public int FileSize { get; set; }
 
     //Constructor
-    public Files(string fileName, int fileSize)
+    public FilesBuilds(string fileName, int fileSize)
     {
         this.FileName = fileName;
         this.FileSize = fileSize;

@@ -7,53 +7,55 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Directory
+public class DirectoryBuilds
 {
     //Fields
     private string dirName;
-    private List<Files> files;
-    private List<Directory> directories;
+    private DirectoryBuilds parentDir;
+    private List<FilesBuilds> files;
+    private List<DirectoryBuilds> directories;
     private int dirSize;
 
     //Properties
     public string DirName { get; set; }
-    public List<Files> Files { get; set; }
-    public List<Directory> Directories { get; set; }
+    public DirectoryBuilds ParentDir { get; set; }
+    public List<FilesBuilds> Files { get; set; }
+    public List<DirectoryBuilds> Directories { get; set; }
     public int DirSize { get; set; }
 
     //Default Constructor
-    public Directory(string dirName)
+    public DirectoryBuilds(string dirName)
     {
         this.DirName = dirName;
-        this.Files = new List<Files>();
-        this.Directories = new List<Directory>();
+        this.Files = new List<FilesBuilds>();
+        this.Directories = new List<DirectoryBuilds>();
         this.DirSize = 0;
     }
 
     //Constructor with inputs
-    public Directory(List<Files> files, List<Directory> directories)
+    public DirectoryBuilds(List<FilesBuilds> files, List<DirectoryBuilds> directories)
     {
         this.Files = files;
         this.Directories = directories;
         this.DirSize = 0;
     }
 
-    public void AddDirectory(Directory directory)
+    public void AddDirectory(DirectoryBuilds directory)
     {
         Directories.Add(directory);
     }
 
-    public void RemoveDirectory(Directory directory)
+    public void RemoveDirectory(DirectoryBuilds directory)
     {
         Directories.Remove(directory);
     }
 
-    public void AddFiles(Files files)
+    public void AddFiles(FilesBuilds files)
     {
         Files.Add(files);
     }
 
-    public void RemoveFiles(Files files)
+    public void RemoveFiles(FilesBuilds files)
     {
         Files.Remove(files);
     }

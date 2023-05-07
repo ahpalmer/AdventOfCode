@@ -19,8 +19,6 @@ public class Challenge1
     public static void ChallengeOneSolve()
     {
         List<string> data = Utility.RetrieveData();
-        //int answer = FindUnique(data);
-        //Console.WriteLine($"Challenge 1 answer: {answer}");
     }
 
 }
