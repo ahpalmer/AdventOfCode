@@ -6,8 +6,10 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DataStructure;
+using static System.Net.Mime.MediaTypeNames;
 
 public class Utility
 {
@@ -65,7 +67,9 @@ public class Utility
             
             else if (Int32.TryParse(dataLine[0].ToString(), out var throwAway))
             {
-
+                string fileSize = Regex.Split(dataLine, @"\D+").First();
+                //TODO: Fix this regex bug:
+                string fileName = Regex.Replace(dataLine, "", @"\D+");
             }
         }
     }
