@@ -19,6 +19,9 @@ public class Challenge1
     public static void ChallengeOneSolve()
     {
         List<string> data = Utility.RetrieveData();
+        DirectoryBuilds highestParentDirectory = Utility.CreateDirectoryList(data);
+        int totalSize = highestParentDirectory.FindTotalDirectorySize();
+        Console.WriteLine(totalSize);
     }
 
 }

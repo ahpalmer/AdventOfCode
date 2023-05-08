@@ -35,26 +35,33 @@ public class Utility
         return returnList;
     }
 
-    public DirectoryBuilds CreateDirectoryList(List<string> rawData)
+    public static DirectoryBuilds CreateDirectoryList(List<string> rawData)
     {
-        string currentParentDir = "/";
         DirectoryBuilds currentParentDirectory = new DirectoryBuilds("/");
+        DirectoryBuilds highestParentDirectory = currentParentDirectory;
         List<string> data = rawData.Skip(1).ToList();
 
-        foreach (string dataLine in rawData)
+        foreach (string dataLine in data)
         {
             if (dataLine.Substring(2, 2) == "cd")
             {
-                currentParentDir = dataLine.Substring(5);
-
-                try
+                if (dataLine.Substring(2, 4) == "cd .")
                 {
-                    currentParentDirectory = currentParentDirectory.Directories.Single(s => s.DirName == currentParentDir);
-                    Console.WriteLine(currentParentDirectory.DirName);
+                    currentParentDirectory = currentParentDirectory.ParentDir;
                 }
-                catch
+                else
                 {
-                    Console.WriteLine("First directory error");
+                    string newDirectoryName = dataLine.Substring(5);
+
+                    try
+                    {
+                        currentParentDirectory = currentParentDirectory.Directories.Single(s => s.DirName == newDirectoryName);
+                        Console.WriteLine(currentParentDirectory.DirName);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("First directory error");
+                    }
                 }
             }
 
@@ -62,15 +69,24 @@ public class Utility
             {
                 string currentDir = dataLine.Substring(4);
                 DirectoryBuilds currentDirectory = new DirectoryBuilds(currentDir);
+                currentDirectory.ParentDir = currentParentDirectory;
                 currentParentDirectory.AddDirectory(currentDirectory);
             }
             
             else if (Int32.TryParse(dataLine[0].ToString(), out var throwAway))
             {
-                string fileSize = Regex.Split(dataLine, @"\D+").First();
-                //TODO: Fix this regex bug:
-                string fileName = Regex.Replace(dataLine, "", @"\D+");
+                string fileSizeIntermediate = Regex.Split(dataLine, @"\D+").First();
+                Int32.TryParse(fileSizeIntermediate, out var fileSize);
+
+                string fileIntermediate = Regex.Replace(dataLine, @"\d+", "");
+                string fileName = Regex.Replace(fileIntermediate, @"\s", "");
+
+                FileBuilds inputFile = new FileBuilds(fileName, fileSize);
+
+                currentParentDirectory.AddFiles(inputFile);
             }
         }
+
+        return highestParentDirectory;
     }
 }

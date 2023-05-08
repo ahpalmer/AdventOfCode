@@ -12,14 +12,14 @@ public class DirectoryBuilds
     //Fields
     private string dirName;
     private DirectoryBuilds parentDir;
-    private List<FilesBuilds> files;
+    private List<FileBuilds> files;
     private List<DirectoryBuilds> directories;
     private int dirSize;
 
     //Properties
     public string DirName { get; set; }
     public DirectoryBuilds ParentDir { get; set; }
-    public List<FilesBuilds> Files { get; set; }
+    public List<FileBuilds> Files { get; set; }
     public List<DirectoryBuilds> Directories { get; set; }
     public int DirSize { get; set; }
 
@@ -27,13 +27,13 @@ public class DirectoryBuilds
     public DirectoryBuilds(string dirName)
     {
         this.DirName = dirName;
-        this.Files = new List<FilesBuilds>();
+        this.Files = new List<FileBuilds>();
         this.Directories = new List<DirectoryBuilds>();
         this.DirSize = 0;
     }
 
     //Constructor with inputs
-    public DirectoryBuilds(List<FilesBuilds> files, List<DirectoryBuilds> directories)
+    public DirectoryBuilds(List<FileBuilds> files, List<DirectoryBuilds> directories)
     {
         this.Files = files;
         this.Directories = directories;
@@ -50,12 +50,12 @@ public class DirectoryBuilds
         Directories.Remove(directory);
     }
 
-    public void AddFiles(FilesBuilds files)
+    public void AddFiles(FileBuilds files)
     {
         Files.Add(files);
     }
 
-    public void RemoveFiles(FilesBuilds files)
+    public void RemoveFiles(FileBuilds files)
     {
         Files.Remove(files);
     }
