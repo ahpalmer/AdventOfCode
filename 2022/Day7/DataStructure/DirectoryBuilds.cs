@@ -81,4 +81,24 @@ public class DirectoryBuilds
 
         return total;
     }
+
+    public List<DirectoryBuilds> CreateListOfAllParentAndChildDir()
+    {
+        List<DirectoryBuilds> totalListDir = new List<DirectoryBuilds>();
+
+        totalListDir.Add(this);
+        if (this.Directories.Any())
+        {
+            foreach (var directory in this.Directories)
+            {
+                List<DirectoryBuilds> tempListDir = directory.CreateListOfAllParentAndChildDir();
+                foreach (var childDir in tempListDir)
+                {
+                    totalListDir.Add(childDir);
+                }
+            }
+        }
+
+        return totalListDir;
+    }
 }

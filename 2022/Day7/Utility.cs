@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -56,7 +57,6 @@ public class Utility
                     try
                     {
                         currentParentDirectory = currentParentDirectory.Directories.Single(s => s.DirName == newDirectoryName);
-                        Console.WriteLine(currentParentDirectory.DirName);
                     }
                     catch
                     {
@@ -88,5 +88,16 @@ public class Utility
         }
 
         return highestParentDirectory;
+    }
+
+    public static void/*List<DirectoryBuilds>*/ FindSmallDirectories(DirectoryBuilds parentDirectory)
+    {
+        //Only use this method after running through the FindTotalDirectorySize method within the DirectoryBuilds class.  This will run each Directory through the FindCurrentDirectorySize method which sets the dirSize integer to the actual size instead of zero.
+
+    }
+
+    public static void/*List<int>*/ FindSizeAllSmallDirectories(List<DirectoryBuilds> smallDirectories)
+    {
+
     }
 }
