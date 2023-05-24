@@ -17,6 +17,6 @@ public class Challenge2
 
     public static void ChallengeTwoSolve()
     {
-        List<Dictionary<bool, int>> data = Utility.RetrieveData();
+        List<List<(bool, int)>> data = Utility.RetrieveData();
     }
 }
