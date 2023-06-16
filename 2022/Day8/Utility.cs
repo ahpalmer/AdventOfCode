@@ -3,10 +3,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 public class Utility
 {
-    public static List<Dictionary<bool, int>> RetrieveData()
+    public static List<List<(bool, int)>> RetrieveData()
     {
         string dir = Directory.GetCurrentDirectory();
         string path = dir + "\\..\\..\\..\\data\\input.txt";
@@ -14,7 +15,7 @@ public class Utility
         return CreateStringList(path);
     }
 
-    public static List<Dictionary<bool, int>> CreateStringList(string path)
+    public static List<List<(bool, int)>> CreateStringList(string path)
     {
         List<string> returnList = new List<string>();
         using (StreamReader sr = File.OpenText(path))
@@ -28,39 +29,54 @@ public class Utility
         return CreateDictionaryList(returnList);
     }
 
-    public static List<Dictionary<bool, int>> CreateDictionaryList(List<string> stringList)
+    public static List<List<(bool, int)>> CreateDictionaryList(List<string> stringList)
     {
-        int indexCount = 0;
         int listCount = 0;
-
-        //TODO: This is where you left off
         //Dictionary won't work by itself because it is not ordered.  Maybe a List<List<Tuple>>?
-        List<Dictionary<bool, int>> dictList = new List<Dictionary<bool, int>>();
+        List<List<(bool, int)>> tupleList = new List<List<(bool, int)>>();
         foreach(string str in stringList)
         {
-            Dictionary<bool, int> tempDictValue = new Dictionary<bool, int>();
+            int indexCount = 0;
+            List<(bool, int)> tempTupleList = new List<(bool, int)>();
             foreach(char character in str)
             {
                 Int32.TryParse(character.ToString(), out int intValue);
 
                 if (listCount == 0 || listCount == stringList.Count - 1)
                 {
-                    tempDictValue.Add(true, intValue);
+                    tempTupleList.Add((true, intValue));
+                }
+                else if (indexCount == 0 || indexCount == str.Length - 1)
+                {
+                    tempTupleList.Add((true, intValue));
                 }
                 else
                 {
-                    tempDictValue.Add(false, intValue);
+                    tempTupleList.Add((false, intValue));
                 }
                 indexCount++;
             }
-
-
-            dictList.Add(tempDictValue);
+            tupleList.Add(tempTupleList);
             listCount++;
         }
+        return tupleList;
+    }
 
-        
-
-        return dictList;
+    public static void PrintTupleList(List<List<(bool, int)>> tupleList)
+    {
+        int line = 0;
+        StringBuilder lineString = new StringBuilder();
+        foreach (var item in tupleList)
+        {
+            line += 1;
+            Console.WriteLine($"Line: {line}");
+            lineString.Clear();
+            foreach (var item2 in item)
+            {
+                lineString.Append(item2.Item1.ToString() + ":" + item2.Item2.ToString() + ", ");
+            }
+            Console.WriteLine(lineString);
+            Console.WriteLine("\n");
+        }
     }
 }
