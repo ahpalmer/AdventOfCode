@@ -15,7 +15,8 @@ class Program
 
     public static void Main(string[] args)
     {
-        Challenge1.ChallengeOneSolve();
-        //Challenge2.ChallengeTwoSolve();
+        //Challenge1.ChallengeOneSolve();
+        Challenge2 challenge2 = new Challenge2();
+        challenge2.ChallengeTwoSolve();
     }
 }
