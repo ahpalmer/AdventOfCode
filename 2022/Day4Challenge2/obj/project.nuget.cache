@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LJkdmXB9EJRF/ReBwvRY+pL05Hr0Bc9cpr8j7ynaMmN9nGJi+WMtepTDOVzIjjiWmGJhOfLUhTt2Vd+3L2IN9Q==",
+  "dgSpecHash": "2b+xWDuLxVFtIrY/xPvb91gz8wZ2u2GlztgPM4pebQvBI6ovLnlK0w9iHr/rjt1+2nBhM9wZVSrAs6rEKu8kpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2022\\Day4Challenge2\\Day4Challenge2.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\andrewpalmer\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\andrewpalmer\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\andrewpalmer\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\andrewpalmer\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.15\\microsoft.netcore.app.host.win-x64.6.0.15.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
