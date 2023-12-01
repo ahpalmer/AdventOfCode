@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "IK+k34ZuRBh0GSM1Gu0ist4bXceY6xlbiCZ9CdR3kPF3yOhejWwd7b1Ytd+/IdrW+CuQVrsOGl31XNQAn0phgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\andrewpalmer\\Documents\\CloudRepos\\AdventOfCode\\2023\\Advent2023Tests\\Advent2023Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\microsoft.net.test.sdk\\17.6.0\\microsoft.net.test.sdk.17.6.0.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.6.0\\microsoft.testplatform.objectmodel.17.6.0.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\microsoft.testplatform.testhost\\17.6.0\\microsoft.testplatform.testhost.17.6.0.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\mstest.testadapter\\3.0.4\\mstest.testadapter.3.0.4.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\mstest.testframework\\3.0.4\\mstest.testframework.3.0.4.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
+    "C:\\Users\\andrewpalmer\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
