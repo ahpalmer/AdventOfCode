@@ -10,3 +10,15 @@ C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Utilities\Utilities
 C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\refint\Utility.dll
 C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\Utility.pdb
 C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\ref\Utility.dll
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\bin\Debug\net8.0\Utility.deps.json
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\bin\Debug\net8.0\Utility.dll
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\bin\Debug\net8.0\Utility.pdb
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\Utility.AssemblyInfoInputs.cache
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\Utility.AssemblyInfo.cs
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\Utility.csproj.CoreCompileInputs.cache
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\Utility.sourcelink.json
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\Utility.dll
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\refint\Utility.dll
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\Utility.pdb
+C:\Users\ahpalmer\OneDrive\Documents\0LocalProgrammingProjects\AdventOfCode\2023\Utilities\Utilities\obj\Debug\net8.0\ref\Utility.dll
