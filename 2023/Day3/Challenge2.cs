@@ -3,8 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Advent2023Day3;
 
-//3hr 15 mins.
-internal class Challenge1
+internal class Challenge2
 {
     Regex regexSymbols = new Regex(@"([^\w.\s])");
     Regex regexDigits = new Regex(@"\d+", RegexOptions.ECMAScript);

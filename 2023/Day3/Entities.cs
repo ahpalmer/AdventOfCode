@@ -29,7 +29,7 @@ internal class NumberPoint
 {
     private int _number;
     private List<Point> _pointList = new List<Point>();
-    public bool _nearSymbol { get; set; }
+    public bool nearSymbol { get; set; }
 
     public int Number
     {
@@ -52,13 +52,13 @@ internal class NumberPoint
     {
         _number = number;
         PointList = new List<Point>();
-        _nearSymbol = false;
+        nearSymbol = false;
     }
 
     public NumberPoint(int number, List<Point> pointList, bool nearSymbol)
     {
         _number = number;
         PointList = pointList;
-        _nearSymbol = nearSymbol;
+        this.nearSymbol = nearSymbol;
     }
 }
