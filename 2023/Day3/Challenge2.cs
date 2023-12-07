@@ -5,7 +5,7 @@ namespace Advent2023Day3;
 
 internal class Challenge2
 {
-    Regex regexSymbols = new Regex(@"([^\w.\s])");
+    Regex regexSymbols = new Regex(@"[*]");
     Regex regexDigits = new Regex(@"\d+", RegexOptions.ECMAScript);
 
     internal int Solve()
@@ -26,14 +26,24 @@ internal class Challenge2
             Y++;
         }
 
-        foreach (var number in numbersChart)
+        foreach(var number in numbersChart)
         {
-            List<Point> possibleCoordinates = ExpandPointList(symbolsChart);
-
-            number.nearSymbol = doTheListsMatch(number.PointList, possibleCoordinates);
+            number.PointList = ExpandPointList(number.PointList);
         }
 
-        int answer = numbersChart.Where(x => x.nearSymbol == true).Select(y => y.Number).Sum();
+        for(int i = 0; i < symbolsChart.Count; i++)
+        {
+            symbolsChart[i] = doTheListsMatch(symbolsChart[i], numbersChart);
+        }
+
+        int answer = 0;
+        foreach (var point in symbolsChart)
+        {
+            if (point.Symbol == true)
+            {
+                answer = answer + (point.Numbers[0] * point.Numbers[1]);
+            }
+        }
 
         return answer;
     }
@@ -45,7 +55,7 @@ internal class Challenge2
         MatchCollection matches = regexSymbols.Matches(input);
         foreach (Match match in matches)
         {
-            Point tempPoint = new Point(match.Index, Y, true);
+            Point tempPoint = new Point(match.Index, Y, false);
             tempSymbols.Add(tempPoint);
         }
 
@@ -122,17 +132,25 @@ internal class Challenge2
         return answerList;
     }
 
-    internal bool doTheListsMatch(List<Point> listToTest, List<Point> possibleCoordinates)
+    internal Point doTheListsMatch(Point pointToTest, List<NumberPoint> possibleCoordinates)
     {
-        foreach(Point point in listToTest)
+        foreach(NumberPoint number in possibleCoordinates)
         {
-            var possibleCoordsStrings = possibleCoordinates.Select(x => x.ToString());
-            if (possibleCoordsStrings.Contains(point.ToString()))
+            var possibleCoordStrings = number.PointList.Select(x => x.ToString());
+
+            foreach (Point point in number.PointList)
             {
-                return true;
+                if (possibleCoordStrings.Contains(pointToTest.ToString()) && !pointToTest.Numbers.Contains(number.Number))
+                {
+                    pointToTest.AddNearbyNumber(number.Number);
+                }
             }
         }
 
-        return false;
+        if (pointToTest.Numbers.Count() == 2)
+        {
+            pointToTest.Symbol = true;
+        }
+        return pointToTest;
     }
 }

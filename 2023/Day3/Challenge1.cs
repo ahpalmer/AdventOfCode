@@ -27,14 +27,15 @@ internal class Challenge1
             Y++;
         }
 
+        List<Point> possibleCoordinates = ExpandPointList(symbolsChart);
+
         foreach (var number in numbersChart)
         {
-            List<Point> possibleCoordinates = ExpandPointList(symbolsChart);
 
-            number.nearSymbol = doTheListsMatch(number.PointList, possibleCoordinates);
+            number.nearTwoNumbers = doTheListsMatch(number.PointList, possibleCoordinates);
         }
 
-        int answer = numbersChart.Where(x => x.nearSymbol == true).Select(y => y.Number).Sum();
+        int answer = numbersChart.Where(x => x.nearTwoNumbers == true).Select(y => y.Number).Sum();
 
         return answer;
     }
