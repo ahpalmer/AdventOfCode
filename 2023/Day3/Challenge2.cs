@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Advent2023Day3;
 
+//Time: 1hr 10 mins.
 internal class Challenge2
 {
     Regex regexSymbols = new Regex(@"[*]");
