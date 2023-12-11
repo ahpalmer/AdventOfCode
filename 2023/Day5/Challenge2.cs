@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Advent2023Day5;
 
+//Brute-forced the problem.  Not elegant, took like 25 minutes, but it worked.
 public class Challenge2
 {
     Regex firstLineRegex = new Regex(@"(\d+)");
@@ -18,21 +19,28 @@ public class Challenge2
         List<(long, long, long)> temperatureToHumidity = FindMaps(dataList, 128, 171, firstLineRegex);
         List<(long, long, long)> humidityToLocation = FindMaps(dataList, 174, 193, firstLineRegex);
 
+        List<long> tempAnswers = new List<long>();
         List<long> answers = new List<long>();
 
-        answers = NextIteration(seeds, seedToSoil);
-        answers = NextIteration(answers, soilToFertilizer);
-        answers = NextIteration(answers, fertilizerToWater);
-        answers = NextIteration(answers, waterToLight);
-        answers = NextIteration(answers, lightToTemperature);
-        answers = NextIteration(answers, temperatureToHumidity);
-        answers = NextIteration(answers, humidityToLocation);
+        for (int i = 0; i < (seeds.Count / 2); i = i + 2)
+        {
+            List<long> tempExpandedSeeds = ExpandSeedsList(seeds[i], seeds[i + 1]);
+            tempAnswers = NextIteration(tempExpandedSeeds, seedToSoil);
+            var tempAnswers2 = NextIteration(tempAnswers, soilToFertilizer);
+            var tempAnswers3 = NextIteration(tempAnswers2, fertilizerToWater);
+            var tempAnswers4 = NextIteration(tempAnswers3, waterToLight);
+            var tempAnswers5 = NextIteration(tempAnswers4, lightToTemperature);
+            var tempAnswers6 = NextIteration(tempAnswers5, temperatureToHumidity);
+            var tempAnswers7 = NextIteration(tempAnswers6, humidityToLocation);
 
-        long answer = answers.Min();
+            long answer = tempAnswers7.Min();
+            answers.Add(answer);
+        }
 
-        return answer;
+        return answers.Min();
     }
 
+    //List is too big.  It's getting too large and h
     public List<long> NextIteration(List<long> latestAnswer, List<(long, long, long)> nextIterationList)
     {
         List<long> answer = new List<long>();
@@ -58,15 +66,9 @@ public class Challenge2
         return answer;
     }
 
-    public List<long> ExpandSeedsList(List<long> seeds)
+    public List<long> ExpandSeedsList(long start, long count)
     {
-        var answer = new List<long>();
-
-        for (int i = 0; i < (seeds.Count / 2); i = i + 2)
-        {
-            List<long> temp = LongRange(seeds[i], seeds[i + 1]).ToList();
-            answer = answer.Concat(temp).Distinct().ToList();
-        }
+        var answer = LongRange(start, count).ToList();
 
         return answer;
     }
