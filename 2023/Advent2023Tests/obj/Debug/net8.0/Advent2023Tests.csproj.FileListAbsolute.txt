@@ -263,3 +263,13 @@ C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin
 C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day3.dll
 C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day2.pdb
 C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day3.pdb
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day6.deps.json
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day6.runtimeconfig.json
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day6.exe
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day7.deps.json
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day7.runtimeconfig.json
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day7.exe
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day6.dll
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day7.dll
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day6.pdb
+C:\Users\andrewpalmer\Documents\CloudRepos\AdventOfCode\2023\Advent2023Tests\bin\Debug\net8.0\Day7.pdb

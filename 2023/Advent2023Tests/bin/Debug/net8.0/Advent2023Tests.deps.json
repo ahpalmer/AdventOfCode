@@ -11,6 +11,8 @@
           "Day1": "1.0.0",
           "Day2": "1.0.0",
           "Day3": "1.0.0",
+          "Day6": "1.0.0",
+          "Day7": "1.0.0",
           "MSTest.TestAdapter": "3.0.4",
           "MSTest.TestFramework": "3.0.4",
           "Microsoft.NET.Test.Sdk": "17.6.0",
@@ -420,6 +422,22 @@
           "Day3.dll": {}
         }
       },
+      "Day6/1.0.0": {
+        "dependencies": {
+          "Utility": "1.0.0"
+        },
+        "runtime": {
+          "Day6.dll": {}
+        }
+      },
+      "Day7/1.0.0": {
+        "dependencies": {
+          "Utility": "1.0.0"
+        },
+        "runtime": {
+          "Day7.dll": {}
+        }
+      },
       "Utility/1.0.0": {
         "runtime": {
           "Utility.dll": {}
@@ -543,6 +561,16 @@
       "sha512": ""
     },
     "Day3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Day6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Day7/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
