@@ -2,5 +2,5 @@
 
 public interface IDay1Program
 {
-    public Task<string> Run();
+    public Task<List<string>> Run();
 }
