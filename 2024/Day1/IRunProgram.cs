@@ -1,6 +1,6 @@
 ﻿namespace Day1;
 
-public interface IDay1Program
+public interface IRunProgram
 {
     public Task<List<string>> Run();
 }

@@ -1,6 +1,6 @@
 ﻿namespace Day1;
 
-public class Day1Program : IDay1Program
+public class Day1Program : IRunProgram
 {
     public async Task<List<string>> Run()
     {

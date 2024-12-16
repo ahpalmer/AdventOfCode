@@ -1,4 +1,5 @@
 ﻿using Day1;
+using Day2;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ProgramStart;
@@ -9,7 +10,8 @@ public class Program
     {
         var serviceProvider = new ServiceCollection()
             .AddSingleton<IProgramStart, ProgramStart>()
-            .AddSingleton<IDay1Program, Day1Program>()
+            .AddSingleton<IRunProgram, Day1Program>()
+            .AddSingleton<IRunProgram, Day2Program>()
             .BuildServiceProvider();
 
         var service = serviceProvider.GetService<IProgramStart>()!;
