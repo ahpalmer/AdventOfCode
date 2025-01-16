@@ -1,9 +1,11 @@
-﻿namespace Day4;
+﻿using Advent2024Utility;
+
+namespace Day4;
 
 public class Challenge1
 {
-    public string Solve()
+    public string Solve(List<string> inputList)
     {
-
+        
     }
 }
