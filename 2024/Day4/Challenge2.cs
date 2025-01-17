@@ -2,9 +2,9 @@
 
 public class Challenge2
 {
-    public string Solve()
-    {
+    //public string Solve()
+    //{
 
-    }
+    //}
 
 }
