@@ -14,7 +14,6 @@ public class Challenge2
         int count = 0;
         foreach (var pageUpdate in pageUpdates)
         {
-            bool successful = true;
             for (int i = 0; i < pageUpdate.Count; i++)
             {
                 List<int> tempList = pageUpdate.GetRange(0, i);
@@ -22,7 +21,6 @@ public class Challenge2
                 {
                     if (tempList.Any(i => tempList2.Contains(i)))
                     {
-                        successful = false;
                         failedPageUpdates.Add(pageUpdate);
                         break;
                     }
