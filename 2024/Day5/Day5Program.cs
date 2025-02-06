@@ -11,15 +11,15 @@ public class Day5Program : IRunProgram
         Dictionary<int, List<int>> pageRules = GetFirstList(inputList);
         List<List<int>> pageUpdates = GetSecondList(inputList);
 
-        Day5.Challenge1 chal1 = new Challenge1();
-        var task1 = Task.Run(() => chal1.Solve(pageRules, pageUpdates));
-        var results = (await Task.WhenAll(task1)).ToList();
+        //Day5.Challenge1 chal1 = new Challenge1();
+        //var task1 = Task.Run(() => chal1.Solve(pageRules, pageUpdates));
+        //var results = (await Task.WhenAll(task1)).ToList();
 
-        //Day5.Challenge2 chal2 = new Challenge2();
-        //var task2 = Task.Run(() => chal2.Solve(inputList));
-        //var results = (await Task.WhenAll(task2)).ToList();
+        Day5.Challenge2 chal2 = new Challenge2();
+        var task2 = Task.Run(() => chal2.Solve(pageRules, pageUpdates));
+        var results2 = (await Task.WhenAll(task2)).ToList();
 
-        return results;
+        return results2;
     }
 
     static Dictionary<int, List<int>> GetFirstList(List<string> inputList)
