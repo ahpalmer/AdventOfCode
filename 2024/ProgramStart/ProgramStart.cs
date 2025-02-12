@@ -11,19 +11,22 @@ public class ProgramStart : IProgramStart
     public IRunProgram Day3Program { get; set; }
     public IRunProgram Day4Program { get; set; }
     public IRunProgram Day5Program { get; set; }
+    public IRunProgram Day6Program { get; set; }
 
     public ProgramStart(
         IRunProgram day1Program, 
         IRunProgram day2Program,
         IRunProgram day3Program,
         IRunProgram day4Program,
-        IRunProgram day5Program)
+        IRunProgram day5Program,
+        IRunProgram day6Program)
     {
         Day1Program = day1Program;
         Day2Program = day2Program;
         Day3Program = day3Program;
         Day4Program = day4Program;
         Day5Program = day5Program;
+        Day6Program = day6Program;
     }
 
     public async Task StartAsync()
@@ -32,6 +35,7 @@ public class ProgramStart : IProgramStart
         //await Day2Program.Run();
         //await Day3Program.Run();
         //await Day4Program.Run();
-        await Day5Program.Run();
+        //await Day5Program.Run();
+        await Day6Program.Run();
     }
 }
