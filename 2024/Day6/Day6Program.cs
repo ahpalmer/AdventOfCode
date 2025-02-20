@@ -7,7 +7,7 @@ public class Day6Program : IRunProgram
 {
     public async Task<List<string>> Run()
     {
-        List<string> inputList = Utility.CreateStringList("Day6Test.txt");
+        List<string> inputList = Utility.CreateStringList("Day6.txt");
         List<Day6Coordinates> coordinateList = CreateInputList(inputList);
 
         //Day6.Challenge1 chal1 = new Challenge1();
