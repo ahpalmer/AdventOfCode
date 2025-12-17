@@ -5,7 +5,7 @@ def challenge1():
     count = 0
     safe_number = 50
     for input_line in data:
-        line = input_line.strip()            
+        line = input_line.strip()
         if (line[0] == "R"):
             safe_number += int(line[1:]) % 100
         else:
