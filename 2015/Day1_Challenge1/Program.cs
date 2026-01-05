@@ -50,8 +50,8 @@ class mainclass
                 {
                     Console.WriteLine(counter);
                     break;
+                }
             }
         }
     }
-
 }

@@ -43,5 +43,3 @@ def find_invalid_ids_individual(check_number):
     if (int(first_half) == int(second_half)):
         return int(check_number)
     return 0
-
-challenge1()
