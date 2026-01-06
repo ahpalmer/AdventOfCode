@@ -19,4 +19,5 @@ def challenge1():
     print(count)
 
 
-challenge1()
+if __name__ == "__main__":
+    challenge1()

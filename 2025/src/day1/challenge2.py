@@ -32,4 +32,5 @@ def challenge2(day_file = "day1"):
     return count
 
 
-challenge2()
+if __name__ == "__main__":
+    challenge2()
