@@ -3,7 +3,7 @@ import day2.challenge2 as d2c2
 
 def test_day2_challenge2_find_invalid_ids():
     data = "11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124"
-    data_list = data.split(',')
+    data_list: list[str] = data.split(',')
     assert d2c2.find_invalid_ids(data_list) == 4174379265
 
 def test_day2_challenge2_find_invalid_ids_individual():
