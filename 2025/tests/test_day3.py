@@ -8,8 +8,8 @@ def test_d3c2_solution_loop():
     line4 = "818181911112111"
     assert d3c2.solution_loop(line1) == 987654321111
     assert d3c2.solution_loop(line2) == 811111111119
-    assert d3c2.solution_loop(line3) == 234234234278
-    assert d3c2.solution_loop(line4) == 818819111121
+    assert d3c2.solution_loop(line3) == 434234234278
+    assert d3c2.solution_loop(line4) == 888911112111
 
 def test_d3c2_compare_numbers_2():
     line1 = "234234234234278"
@@ -19,7 +19,7 @@ def test_d3c2_compare_numbers_2():
     assert d3c2.compare_numbers(line1, 0) == ("34234234234278", 0, 1)
     assert d3c2.compare_numbers(line2, 0) == ("4234234234278", 0, 1)
     assert d3c2.compare_numbers(line3, 0) == ("4234234234278", 1, 0)
-    assert d3c2.compare_numbers(line4, 1) == ("434234234278", 1, 1)
+    assert d3c2.compare_numbers(line4, 1) == ("434234234278", 0, 1)
 
 def test_d3c2_compare_numbers():
     line1 = "987654321111111"

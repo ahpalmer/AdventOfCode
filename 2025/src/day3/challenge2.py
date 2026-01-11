@@ -4,8 +4,8 @@ def challenge2(day_file: str = "day3"):
     data: list[str] = data_util.retrieve_data_from_file_name(day_file)
     total_count = 0
     for line in data:
-        total_count = solution_loop(line)
-    print(data)
+        total_count += solution_loop(line)
+    print(total_count)
     return None
 
 def solution_loop(line: str) -> int:
@@ -20,7 +20,8 @@ def solution_loop(line: str) -> int:
 def compare_numbers(line: str, loop_counter: int) -> tuple[str, int, int]:
     if (line[loop_counter] < line[loop_counter + 1]):
         new_line = line[:loop_counter] + line[loop_counter + 1:]
-        return new_line, loop_counter, 1
+        loop_counter -= 1
+        return new_line, loop_counter if loop_counter >= 0 else 0, 1
     else:
         loop_counter += 1
         return line, loop_counter, 0
