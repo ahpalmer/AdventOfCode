@@ -1,7 +1,9 @@
 [tool.poetry]
 packages = [{include = "utility", from = "src"},
 {include = "day1", from = "src"},
-{include = "day2", from = "src"}]
+{include = "day2", from = "src"},
+{include = "day3", from = "src"},
+{include = "day4", from = "src"}]
 
 [project]
 name = "aoc2025"

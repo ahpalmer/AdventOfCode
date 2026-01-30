@@ -14,6 +14,7 @@ def retrieve_data_from_absolute_path(file_path):
     try:
         with open(file_path, 'r') as file:
             content = file.readlines()
+        content = [line.strip() for line in content]
         return content
     except FileNotFoundError:
         print(f"File Not found: {file_path}")
