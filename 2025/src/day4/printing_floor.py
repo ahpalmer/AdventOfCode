@@ -1,6 +1,9 @@
 class PrintingFloor:
     def __init__(self):
         self.strings: list[str] = []
+
+    def __len__(self):
+        return len(self.strings)
     
     def add_string(self, value: str) -> None:
         self.strings.append(value)
